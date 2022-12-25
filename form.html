@@ -7,20 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Form</title>
 </head>
-    <style>
-        th, tr {
-            border: 3px solid navy;
-     
-        
-        }
-        table {
-    border-spacing: 0;
-    border-collapse: collapse;
-        }
-        textarea {
-    resize: none;
-        }
-        </style>
+<style>
+    th,
+    tr {
+        border: 3px solid navy;
+
+
+    }
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    textarea {
+        resize: none;
+    }
+</style>
 
 <body>
     <table>
@@ -29,37 +32,37 @@
                 <th>
                     <h4>測試用表格</h4>
                 </th>
-            </tr>  
-        </table>
+            </tr>
+    </table>
 
-        <tbody>
-            <tr>
-                <td>
-        
-                    <form method="post" action="https://book.niceinfos.com/frontend/assets/html_contact_form/api.php">
+    <tbody>
+        <tr>
+            <td>
+
+                <form method="post" action="https://book.niceinfos.com/frontend/assets/html_contact_form/api.php">
+                    <div>
+                        <label for="f-account">帳號</label>
+                    </div>
+                    <div>
+                        <input type="text" name="account" value="" placeholder="請輸入帳號" id="f-account">
+                    </div>
+                    <div>
                         <div>
-                            <label for="f-account">帳號</label>
+                            <label for="f-password">密碼</label>
                         </div>
-                        <div>
-                            <input type="text" name="account" value="" placeholder="請輸入帳號">
-                        </div>
-                        <div>
-                            <div>
-                                <label for="f-password">密碼</label>
-                            </div>   
-                            <input type="password" name="password" placeholder="請輸入密碼">
-                        </div>
-                        <div>
-                            <input type="number" name="auth" placeholder="請輸入驗證數字">
-                        </div>
-                        <div>
-                            <input type="tel" name="phone" placeholder="請輸入電話">
-                        </div>
-                        <div>
-                            <input type="date" name="date" placeholder="請輸入日期">
-                        </div>
-                        <div>
-                            <input type="time" name="time" placeholder="請輸入時間">
+                        <input type="password" name="password" placeholder="請輸入密碼">
+                    </div>
+                    <div>
+                        <input type="number" name="auth" placeholder="請輸入驗證數字">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="請輸入電話">
+                    </div>
+                    <div>
+                        <input type="date" name="date" placeholder="請輸入日期">
+                    </div>
+                    <div>
+                        <input type="time" name="time" placeholder="請輸入時間">
                         <div>
                             <select name="county[]" multiple>
                                 <option>選擇縣市</option>
@@ -76,15 +79,15 @@
                                 <button type="submit">發送</button>
                                 <button type="button">預覽</button>
                             </div>
-                        </div>  
-                        <label for="f-account">點我輸入帳號</label> 
-                        <label for="f-password">點我輸入密碼</label>                   
-                    </form>               
-                </td>
-            </tr>
-            </tbody>
-          
-                
+                        </div>
+                        <label for="f-account">點我輸入帳號</label>
+                        <label for="f-password">點我輸入密碼</label>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+
+
 
 </body>
 <script>
