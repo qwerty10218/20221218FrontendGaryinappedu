@@ -1,8 +1,20 @@
+#two{
+    color: orange;
+}
+
+.mtwo {
+    background: red;
+}
+
+div {
+    color: #dedede;
+}
+
 div {
     color: red;
-    font-size: 72px;
 }
-.a {
-    color: red;
-    font-size: 72px;
+
+
+span {
+    color: blue;
 }
