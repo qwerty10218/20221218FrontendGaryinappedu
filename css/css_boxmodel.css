@@ -45,3 +45,19 @@
     margin-top:20px;
     text-align: center;
 }
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px; 
+    border-color: blue;
+    border-style: solid ;
+    
+}  
+
+.color{
+background-color: red;
+width: 400px;
+height: 400px;
+margin-top: 20px;
+}
