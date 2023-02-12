@@ -56,7 +56,7 @@ body {
 }
 
 .header .menu li:hover {
-    color: rgb(47, 47, 255);
+    color: brown
 }
 
 .header .menu .en {
@@ -65,4 +65,4 @@ body {
     text-transform: uppercase;
 }
 
-/*# sourceMappingURL=layout_first.css.map */
+/*# sourceMappingURL=layout_1.css.map */
