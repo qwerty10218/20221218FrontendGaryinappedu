@@ -1,54 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Form</title>
 </head>
+<style>
+    th,
+    tr {
+        border: 3px solid navy;
+
+
+    }
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    textarea {
+        resize: none;
+    }
+</style>
+
 <body>
-    <form method="GET" action="https://book.niceinfos.com/frontend/assets/html_contact_form/api.php">
-        <div>
-            <label for="f-account">帳號</label>
-        </div>
-        <div>
-            <input type="text" name="account" id="f-account" value="" placeholder="請輸入帳號">
-        </div>
-        <div>
-            <input type="password" name="password" placeholder="請輸入密碼">
-        </div>
-        <div>
-            <input type="number" name="auth" placeholder="請輸入驗證數字">
-        </div>
-        <div>
-            <input type="tel" name="phone" placeholder="請輸入電話">
-        </div>
-        <div>
-            <input type="color" name="color" placeholder="請輸入顏色">
-        </div>
-        <div>
-            <input type="date" name="date" placeholder="請輸入日期">
-        </div>
-        <div>
-            <input type="time" name="time" placeholder="請輸入時間">
-        </div>
-        <div>
-            <select name="county[]" multiple>
-                <option>請選擇縣市</option>
-                <option value="TP">台北</option>
-                <option value="台中">台中</option>
-                <option>高雄</option>
-                <div>ABABABABABABBABABABABABABABABB</div>
-            </select>
-        </div>
-        <div>
-            <textarea name="remark" cols="30" rows="10" style="resize:none;"></textarea>
-        </div>
-        <div>
-            <button type="submit">發送</button>
-            <button type="button">預覽</button>
-        </div>
-        <label for="f-account">點我輸入帳號</label>
-    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <h4>測試用表格</h4>
+                </th>
+            </tr>
+    </table>
+
+    <tbody>
+        <tr>
+            <td>
+
+                <form method="post" action="https://book.niceinfos.com/frontend/assets/html_contact_form/api.php">
+                    <div>
+                        <label for="f-account">帳號</label>
+                    </div>
+                    <div>
+                        <input type="text" name="account" value="" placeholder="請輸入帳號" id="f-account">
+                    </div>
+                    <div>
+                        <div>
+                            <label for="f-password">密碼</label>
+                        </div>
+                        <input type="password" name="password" placeholder="請輸入密碼">
+                    </div>
+                    <div>
+                        <input type="number" name="auth" placeholder="請輸入驗證數字">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="請輸入電話">
+                    </div>
+                    <div>
+                        <input type="date" name="date" placeholder="請輸入日期">
+                    </div>
+                    <div>
+                        <input type="time" name="time" placeholder="請輸入時間">
+                        <div>
+                            <select name="county[]" multiple>
+                                <option>選擇縣市</option>
+                                <option>台北</option>
+                                <option>台中</option>
+                                <option>高雄</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea name="remark" cols="30" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <div id="btn">
+                                <button type="submit">發送</button>
+                                <button type="button">預覽</button>
+                            </div>
+                        </div>
+                        <label for="f-account">點我輸入帳號</label>
+                        <label for="f-password">點我輸入密碼</label>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+
+
+
 </body>
+<script>
+    let btn = document.querySelector('#btn')
+
+    btn.addEventListener('click', (e) => {
+        alert('提交成功!')
+    })
+</script>
+
 </html>
