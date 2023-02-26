@@ -29,6 +29,7 @@ a {
   position: relative;
   margin-bottom: 20px;
 }
+
 .slogan::after {
   content: "";
   position: absolute;
@@ -49,13 +50,16 @@ a {
   border-radius: 8px;
   font-size: 18px;
 }
+
 .form-control:focus {
   background: #1c54bd;
   color: #fff;
 }
+
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
+
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -67,17 +71,21 @@ a {
   font-weight: 800;
   cursor: pointer;
 }
+
 .button.primary {
   background: #8110c2;
   color: #fff;
 }
+
 .button.primary:hover {
   background-color: #6e09a8;
 }
+
 .button.danger {
   background: rgb(218, 49, 27);
   color: #fff;
 }
+
 .button.danger:hover {
   background-color: rgb(172, 33, 15);
 }
@@ -89,101 +97,124 @@ a {
 .form-control-item {
   margin-bottom: 15px;
 }
+
 .form-control-item.form-control-mixed {
   position: relative;
 }
+
 .form-control-item.form-control-mixed .form-control {
   width: calc(100% - 1px);
 }
+
 .form-control-item.form-control-mixed.after .form-control {
   padding-right: 80px;
 }
+
 .form-control-item.form-control-mixed.after .form-control-append {
   right: 0;
 }
+
 .form-control-item.form-control-mixed.after .form-control-append .button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .form-control-item.form-control-mixed.before .form-control {
   padding-left: 80px;
   margin-left: 1px;
 }
+
 .form-control-item.form-control-mixed.before .form-control-append {
   left: 0;
 }
+
 .form-control-item.form-control-mixed.before .form-control-append .button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .form-control-item .form-control-append {
   position: absolute;
   top: 0;
   height: 100%;
 }
+
 .form-control-item .form-control-append .button {
   height: 100%;
   display: inline-block;
 }
 
-.product-block {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
+.block {
+  width: 200px;
+  height: 200px;
+  background: #ff5656;
+  color: #fff;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  position: relative;
+  left: 0;
 }
 
-.product {
-  width: 300px;
-  min-height: 200px;
-  background: #dedede;
-  padding: 15px;
-  margin: 0 15px;
-  margin-bottom: 15px;
-}
-.product .product-image {
-  width: 100%;
-  height: 200px;
-  background-color: #ff5858;
-  color: #fff;
-  margin-bottom: 15px;
+.block > label {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-.product .product-image .product-image-wrap {
-  background-position: center;
-  background-image: url(../images/perfume.jpg);
-  background-size: cover;
+  align-items: center;
   width: 100%;
   height: 100%;
-  transition: all 1s;
+  cursor: pointer;
 }
-.product .product-image .discount-bar {
-  background: #683636;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "Shantell Sans", cursive;
-  transform: rotate(45deg);
-  position: absolute;
-  right: -105px;
-  top: 10px;
+
+#switch-status {
+  display: none;
 }
-.product .product-image:hover .product-image-wrap {
-  transform: scale(1.5);
+
+#switch-status:checked ~ .func-block > label.run {
+  display: none;
 }
-.product .product-image:hover .discount-bar {
-  background-color: aquamarine;
-  color: #ff5858;
+
+#switch-status:checked ~ .func-block > label.back {
+  display: inline;
 }
-.product .product-title {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}/*# sourceMappingURL=product_discount.css.map */
+
+#switch-status:checked ~ .block {
+  background: #1d4fb9;
+  font-size: 30px;
+  left: 50%;
+}
+
+.func-block {
+  margin-top: 20px;
+}
+
+.func-block > label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 10px 20px;
+  background-color: #dedede;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.func-block > label.run {
+  background-color: #1d4fb9;
+  color: #fff;
+}
+
+.func-block > label.run:hover {
+  background-color: #12337a;
+}
+
+.func-block > label.back {
+  display: none;
+  background-color: #ff5656;
+  color: #fff;
+}
+
+.func-block > label.back:hover {
+  background-color: #af3030;
+}
+
+/*# sourceMappingURL=transition.css.map */
